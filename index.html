@@ -1,0 +1,65 @@
+<!--
+Draggable DIV Element
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+
+<div>
+<p><label for="file" style="cursor: pointer; ">Load Img From Pc</label></p>
+<p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+</div>
+
+<div style="margin: 10px;">
+<label for="names">From URL:</label>
+<input type="text" id="names" name="names" style="width: 300px;"><br>
+<button type="button" id="myBoton">Show</button>
+<br><br>
+<button type="button" id="flip-button">Clean Img</button>
+<br><br>
+<label>Size</label>
+
+<p><input type="range" onchange="updateSliderR(this)" id="SliderRED" min="0" max="2000" step="1"  style="background: #ff695c;"></p>
+<label>Opacity</label>
+
+<p><input type="range" onchange="updateSliderO(this)" id="SliderOP" min="0" max="1" step="0.1"  style="background: #ff695c;"></p>
+<p id = "texto"></p>
+
+</div>
+
+
+
+<div class="center" style= "width: 80%; height: 80%;">
+
+  <div id="xyz"><img id="output" width="200" /></p></div>
+
+  <video autoplay id="myVideo">
+    <video autoplay></video>
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="content">
+    <button id="myBtn" onclick="myFunction()">Pause</button>
+    <h2>Take Picture</h2>
+    
+  </div>
+
+</div>
+
+<script src="functions.js"></script>
+
+</body>
+</html>
+<!--
+https://www.webtrickshome.com/faq/how-to-display-uploaded-image-in-html-using-javascript
+https://www.webtrickshome.com/faq/how-to-display-uploaded-image-in-html-using-javascript
+https://stackoverflow.com/questions/763745/how-to-get-text-box-value-in-javascript
+  -->
